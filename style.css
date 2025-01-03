@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    /*border: 2px solid red;*/
+    min-width: 100%;
+    width: 100%;
+    /*The height of 100vh extends the height of the #header.*/
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(project7image/japanese-small-dinner-1.png);
+    background-position: center;  
+    background-size: cover;
+}
+.container{
+    /*border: 3px solid green;*/
+    /*The min-width of 100% expands the the width of the container the same as the #header.*/
+    min-width: 100%;
+    height: 170px;
+}
+.logo{
+    /*border: 2px solid red;*/
+    /*The first value of margin gives the top and bottom spaces outside the .logo border. It moves the logo down. The second value of margin gives the left and right spaces outside the .logo border. It gives space between the menu button and the logo image.*/
+    margin: 20px 100px;
+}
+.account-button{
+    /*border: 3px solid gold;*/
+    position: absolute;
+    /*The top of 30px moves the .sign-button div to the top.*/
+    top: 30px;
+    left: 190px;
+    margin-left: 67%;
+    margin-top: 10px;
+    padding-right: 20px;
+    /*The values of display, align-items, and justify-content moves the account-button's elements down and right to the center.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 265px;
+}
+.login-btn{
+    border: 2px solid white;
+    color: white;
+    /*The value of margin-left spread the two buttons apart from each other.*/
+    margin-left: 30px;
+    /*The first value of padding extends the top and bottom space inside the two buttons. The second value of padding extends the left and right space inside the two buttons.*/
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    /*The value of text-decoration removes the underline of the two buttons.*/
+    text-decoration: none;
+}
+.cart{
+    /*border: 2px solid red;*/
+    /*The second value of margin moves the cart icon to the right and gives the left and right space of the .cart icon. It also gives space between the .login-btn and the cart within the account-button div.*/
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+}
+#sideNav{
+    /*The border shows that the #sideNav border covers from left to right.edge of the page.*/
+    /*border: 3px solid green;*/
+    /*The width of 250px reduces the #sideNav's width. */
+    width: 250px;
+    /*The height of 100vh extend the height of the #sideNav.*/
+    height: 100vh; 
+    /*The position of fixed indicates that the #sideNav menu list is fixed in a position regardless of the scrolling of the page. Note: The position of fixed hides the #sideNav menu list. */
+    position: fixed;
+    /*I haven't add left of -300px yet because it will move all the way to the left where it will hide the .menu list.*/   
+    /*The left of -300px moves the #sideNav menu list all the way to the left where it hides the #sideNav menu for javaScript purposes.*/
+    left: -300px;
+    /*The top of 0 moves the #sideNav menu to the upper left corner next to the #header .container logo.*/
+    top: 0px;
+    /*The margin-top of 165px extends the top #sideNav border. It gives space between the bottom part of the .container border and the top #sideNav border */
+    margin-top: 165px;
+    background: #331d1d;
+    transition: .5s; 
+}
+#sideNav ul li{
+    /*border: 3px solid violet;*/
+    /*The first value of margin spreads each #sideNav ul li apart from each other, top and bottom. The second value of margin moves the #sideNav ul li to the point where it aligns to the hamburger menu.*/
+    margin: 30px 70px;
+    /*The text-align of center moves the #sideNav ul li to the center within the #sideNav border or div.*/
+    /*The list-style of none removes the dots.*/
+    list-style: none;
+}
+#sideNav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#menuBtn{
+    /*border: 2px solid blue;*/
+    /*The font-size of 35px enlarges the hamburger menu.*/
+    font-size: 45px;
+    width: 50px;
+    /*With the position of fixed only, it will hide the hamburger menu until somethig is added.*/
+    position: fixed;
+    /*The top of 50px shows that the hamburger menu is at the top left, next to the #header .container logo.*/
+    top: 50px;
+    /*The left of 30px moves the hamburger menu to the right more.*/
+    left: 30px; 
+    /*Adding the value of color changes the hamburger menu to white.*/
+    color: white;
+    /*The text-align of center moves the hamburger menu to the center within the #menuBtn width.*/
+    text-align: center;
+    /*The first value of margin gives space outside of the #menuBtn, top and bottom. The second value of margin gives space outside of the #menuBtn, left and right.*/
+    margin: 10px 30px;
+    z-index: 2;
+    cursor: pointer;
+    background: #331d1d;
+}
+@media only screen and (max-width: 900px){
+    .logo{
+        /*border: 2px solid red;*/
+        /*I change the second value of margin to move the logo more to the right so that it wouldn't overlap with the menu button.*/
+        margin: 10px 60px;
+    }
+    .account-button{
+        /*border: 3px solid gold;*/
+        position: absolute;
+        top: 30px;
+        /*I change the left value to negative to move the account-button div to the left, closer to the logo image.*/
+        left: -110px;
+        margin-left: 67%;
+        margin-top: 10px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 265px;
+    }
+    
+}
